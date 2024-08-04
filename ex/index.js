@@ -33,7 +33,7 @@ function kiemTra() {
 
   // tong diem
 
-  var tongDiem = monT1 + monT2 + monT3;
+  var tongDiem = monT1 + monT2 + monT3 + diemKhuVuc + diemDoiTuong;
   var dauRot = "";
 
   if (tongDiem < diemChuan) {
@@ -45,7 +45,7 @@ function kiemTra() {
   //   console.log({ tongDiem, dauRot });
   document.getElementById(
     "result"
-  ).innerHTML = `<p class="fs-3 fw-bold mt-3 bg-info"> Tong Diem: ${tongDiem} - ${dauRot}</p>`;
+  ).innerHTML = `<p class="fs-4 fw-bold mt-3 bg-info p-1"> Tong Diem: ${tongDiem} - ${dauRot}</p>`;
 }
 
 document.getElementById("btn-kiemTra").addEventListener("click", kiemTra);
