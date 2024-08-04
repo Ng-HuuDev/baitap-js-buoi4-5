@@ -40,7 +40,7 @@ function tinhTien() {
     soKwDaDung = soKw * 1300;
   }
   //
-  console.log(soKwDaDung);
+  //   console.log(soKwDaDung);
   document.getElementById(
     "result"
   ).innerHTML = `<p class="fs-5 fw-bold mt-3 bg-info p-3"> Ho Ten: ${hoTen} <br /> So dien da dung ${soKwDaDung}vnd </p>`;
