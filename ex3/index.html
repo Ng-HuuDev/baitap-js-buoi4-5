@@ -17,15 +17,38 @@
       crossorigin="anonymous"
     />
   </head>
-
-  <body>
-    <header>
-      <!-- place navbar here -->
-    </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
+  <body class="container mt-5 w-50">
+    <h4>
+      Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập
+      năm, số người phụ thuộc). Tính và xuất thuế thu nhập cá nhân phải trả theo
+      quy định sau:
+    </h4>
+    <p class="alert alert-info fw-bold fs-5">
+      Thu nhập chịu thuế = Tổng thu nhập năm - 4tr(giam tru ca nhan) - Số người
+      phụ thuộc * 1.6tr ( moi nguoi se giam tru 1,6tr)
+    </p>
+    <input
+      type="text"
+      id="hoTen"
+      class="form-control mt-3 w-50"
+      placeholder="Ten cua ban"
+    />
+    <input
+      type="number"
+      id="tongThuNhap"
+      class="form-control mt-3 w-50"
+      placeholder="Thu nhap cua ban"
+    />
+    <input
+      type="number"
+      id="soNguoi"
+      class="form-control mt-3 w-50"
+      placeholder="So nguoi phu thuoc"
+    />
+    <button id="btn-tinhThue" class="btn btn-success mt-3">
+      Tinh thue thu nhap
+    </button>
+    <div id="result"></div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -38,5 +61,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
