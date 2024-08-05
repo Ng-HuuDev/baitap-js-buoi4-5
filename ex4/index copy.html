@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập Thông Tin Khách Hàng</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .disabled {
+        background-color: #e0e0e0;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nhập Thông Tin Khách Hàng</h1>
+    <form id="customerForm">
+      <label for="customerId">Mã khách hàng:</label>
+      <input
+        type="text"
+        id="customerId"
+        name="customerId"
+        required
+      /><br /><br />
+
+      <label for="customerType">Loại khách hàng:</label>
+      <select id="customerType" name="customerType">
+        <option value="household">Nhà dân</option>
+        <option value="business">Doanh nghiệp</option></select
+      ><br /><br />
+
+      <div id="connectionDiv">
+        <label for="connections">Số kết nối:</label>
+        <input
+          type="number"
+          id="connections"
+          name="connections"
+          class="disabled"
+          disabled
+        />
+      </div>
+      <br /><br />
+
+      <label for="premiumChannels">Số kênh cao cấp:</label>
+      <input
+        type="number"
+        id="premiumChannels"
+        name="premiumChannels"
+      /><br /><br />
+
+      <input type="submit" value="Gửi" />
+    </form>
+
+    <script>
+      document
+        .getElementById("customerType")
+        .addEventListener("change", function () {
+          var type = this.value;
+          var connectionDiv = document.getElementById("connectionDiv");
+          var connectionsInput = document.getElementById("connections");
+
+          if (type === "business") {
+            connectionDiv.classList.remove("hidden");
+            connectionsInput.disabled = false;
+            connectionsInput.classList.remove("disabled");
+          } else {
+            connectionDiv.classList.add("hidden");
+            connectionsInput.disabled = true;
+            connectionsInput.classList.add("disabled");
+            connectionsInput.value = ""; // Clear the input if disabled
+          }
+        });
+    </script>
+  </body>
+</html>
