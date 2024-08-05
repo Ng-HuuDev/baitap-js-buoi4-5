@@ -10,13 +10,13 @@ function tinhTienCap() {
   var tienThanhToan = 0;
 
   if (loaiKhacHang == "household") {
-    soKetNoi = 0;
+    // soKetNoi = 0;
     tienThanhToan = 4.5 + 20.5 + soKenh * 7.5;
   } else {
-    soKetNoi = 7.5;
+    // soKetNoi = 7.5;
     if (soKetNoi <= 10) {
       tienThanhToan = 15 + 7.5 * soKetNoi + 50 * soKenh;
-    } else {
+    } else if (soKetNoi > 10) {
       tienThanhToan = 15 + 75 + (soKetNoi - 10) * 5 + 50 * soKenh;
     }
   }
@@ -24,7 +24,7 @@ function tinhTienCap() {
 
   document.getElementById(
     "result"
-  ).innerHTML = `<p class="fs-5 fw-bold mt-3 bg-info p-3"> MSKH: ${maKH}  <br /> Tien cap: ${tienThanhToan}vnd  </p>`;
+  ).innerHTML = `<p class="fs-5 fw-bold mt-3 bg-info p-3"> MSKH: ${maKH}  <br /> Tien cap: ${tienThanhToan}$  </p>`;
 }
 
 document.getElementById("btn-tinhTien").addEventListener("click", tinhTienCap);
